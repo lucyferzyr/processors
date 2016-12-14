@@ -1,4 +1,5 @@
 # Changes
++ **6.0.2** - Speed improvements to `BioNLPProcessor` parser (no longer produce constituency trees).
 + **6.0.2** - Fixed odin bug related to` ^` in lookbehinds. Update to use Bioresources 1.1.19 containing Bioentities project KBs.
 + **6.0.1** - Added support to odin for redefining variables.
 + **6.0.1** - Added support to odin for matching mention arguments.
