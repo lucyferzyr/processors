@@ -18,13 +18,13 @@ class TestBioNLPProcessor2 extends FlatSpec with Matchers {
     val text = TestUtils.readFile("org/clulab/processors/PLoS_One_2013_Dec_18_8_12_e84604.abstract.txt")
     val doc = proc.annotate(text)
     //println(s"Generated a doc with ${doc.sentences.size} sentences.")
-    doc.sentences.size should be (7)
-    doc.sentences(0).syntacticTree.isDefined should be (true)
+    doc.sentences should have size (7)
   }
 
   it should "parse body text" in {
     val text = TestUtils.readFile("org/clulab/processors/PLoS_One_2013_Dec_18_8_12_e84604.body.txt")
     val doc = annotate(text)
+    doc.sentences should have size (106)
     doc.sentences(0).syntacticTree.isDefined should be (true)
   }
 
